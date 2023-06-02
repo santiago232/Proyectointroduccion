@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cambio de estilo con JavaScript</title>
+  <style>
+    /* Estilos iniciales */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .destacado {
+      color: black;
+      font-size: 18px;
+      font-weight: normal;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+    
+    .boton {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition-duration: 0.4s;
+    }
+    
+    .boton-estilo1 {
+      background-color: #4CAF50;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .boton-estilo1:hover {
+      background-color: #45a049;
+    }
+    
+    .boton-estilo2 {
+      background-color: #3498db;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .boton-estilo2:hover {
+      background-color: #2980b9;
+    }
+    
+    .boton-estilo3 {
+      background-color: #e74c3c;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .boton-estilo3:hover {
+      background-color: #c0392b;
+    }
+    
+    .boton-restablecer {
+      background-color: #f44336;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .boton-restablecer:hover {
+      background-color: #da291c;
+    }
+    
+    .contenido {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition-duration: 0.3s;
+    }
+    
+    .contenido:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Estilos modificados por los botones */
+    .estilo1 {
+      background-color: #f7f7f7;
+      color: #333333;
+    }
+    
+    .estilo1 .destacado {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff0000;
+      font-family: 'Courier New', monospace;
+    }
+    
+    .estilo2 {
+      background-color: #ffd700;
+      color: #333333;
+    }
+    
+    .estilo2 .destacado {
+      font-size: 20px;
+      font-weight: normal;
+      color: #0000ff;
+      font-family: 'Times New Roman', serif;
+    }
+    
+    .estilo3 {
+      background-color: #800080;
+      color: #ffffff;
+    }
+    
+    .estilo3 .destacado {
+      font-size: 18px;
+      font-weight: bold;
+      color: #00ff00;
+      font-family: 'Arial Black', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="contenido">
+      <h1 class="destacado">Nikola Tesla</h1>
+      <p class="destacado">Nikola Tesla fue un inventor, ingeniero eléctrico, ingeniero mecánico y físico de origen serbio. Nació el 10 de julio de 1856 y falleció el 7 de enero de 1943. Tesla es conocido por sus numerosas contribuciones en el campo de la electricidad y el magnetismo.</p>
+      <p class="destacado">Es especialmente reconocido por su trabajo pionero en la corriente alterna (CA), la cual es ampliamente utilizada en la transmisión y distribución de energía eléctrica en todo el mundo. Tesla también realizó importantes descubrimientos en campos como la iluminación, la radio, las comunicaciones inalámbricas y la energía inalámbrica.</p>
+      <p class="destacado">A lo largo de su vida, Nikola Tesla obtuvo más de 300 patentes por sus invenciones y trabajó en proyectos revolucionarios que sentaron las bases para muchas tecnologías modernas. Su visión y creatividad le han valido el reconocimiento como uno de los más grandes inventores de la historia.</p>
+    </div>
+
+    <br><br>
+
+    <button class="boton boton-estilo1" onclick="cambiarEstilo('estilo1')">Estilo 1</button>
+    <button class="boton boton-estilo2" onclick="cambiarEstilo('estilo2')">Estilo 2</button>
+    <button class="boton boton-estilo3" onclick="cambiarEstilo('estilo3')">Estilo 3</button>
+    <button class="boton boton-restablecer" onclick="restablecerEstilo()">Restablecer</button>
+  </div>
+
+  <script>
+    function cambiarEstilo(estilo) {
+      var body = document.body;
+
+      // Restablecer estilos a los valores iniciales
+      body.classList.remove('estilo1', 'estilo2', 'estilo3');
+
+      // Aplicar estilos según el botón presionado
+      body.classList.add(estilo);
+    }
+    
+    function restablecerEstilo() {
+      var body = document.body;
+
+      // Restablecer estilos a los valores iniciales
+      body.classList.remove('estilo1', 'estilo2', 'estilo3');
+    }
+  </script>
+</body>
+</html>

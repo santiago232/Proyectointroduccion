@@ -1,0 +1,43 @@
+
+div{
+    background-color: rgb(201, 204, 13);
+    padding: 10px;
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+fieldset{
+    margin-bottom: 12px;
+    background-color: rgb(189, 34, 7);
+} 
+legend{
+    background-color: gold;
+    padding: 5px;
+    border-radius: 20%;
+}       
+
+img {
+    padding: 10px;
+    border: 10px solid rgb(2, 99, 6);
+    
+}
+
+p {
+    padding: 5px;
+    
+}
+
+h1 {
+    color: #333;
+}
+
+html {
+
+font-family: Arial, sans-serif;
+background-image:url('pantallazo.jpg');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-color: aliceblue;
+
+}
+
